@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_boilerplate/style/components/component_styles.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
 class SignIn extends StatelessWidget {
@@ -16,6 +17,16 @@ class SignIn extends StatelessWidget {
             child: Wrap(
               runSpacing: 16,
               children: [
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 32),
+                  child: Center(
+                    child: SvgPicture.asset(
+                      'lib/assets/svg/logo-black.svg',
+                      semanticsLabel: 'Daila Logo',
+                      width: 160,
+                    ),
+                  ),
+                ),
                 TextFormField(
                   decoration: getInputDecoration('email'),
                 ),
